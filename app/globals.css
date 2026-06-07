@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   影视创作风暗色主题 — 色彩系统
+   ============================================ */
+
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-panel: #1a1a2e;
+  --bg-surface: #16213e;
+  --accent: #e50914;
+  --accent-hover: #ff1a1a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #888888;
+  --quote: #ffd700;
+  --scene: #4a9eff;
+
+  --status-success: #22c55e;
+  --status-warning: #f59e0b;
+  --status-error: #ef4444;
+
+  --border-color: #1e293b;
+  --scrollbar-thumb: #334155;
+  --scrollbar-track: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Toast container */
+.toast-container {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  animation: toast-in 0.3s ease-out;
+  max-width: 420px;
+  word-break: break-word;
+}
+
+.toast.success {
+  background: #166534;
+  border: 1px solid #22c55e;
+}
+.toast.error {
+  background: #7f1d1d;
+  border: 1px solid #ef4444;
+}
+.toast.warning {
+  background: #78350f;
+  border: 1px solid #f59e0b;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Pulse animation for stop button */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+/* Drag over highlight */
+.drag-over {
+  border-color: var(--accent) !important;
+  background-color: rgba(229, 9, 20, 0.08) !important;
+}
+
+/* Tooltip base */
+.tooltip-wrapper {
+  position: relative;
+}
+.tooltip-wrapper::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: #1e293b;
+  color: #e0e0e0;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 100;
+}
+.tooltip-wrapper:hover::after {
+  opacity: 1;
+}
