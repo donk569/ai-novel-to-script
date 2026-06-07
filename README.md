@@ -6,7 +6,7 @@
 
 ## 📺 Demo 视频
 
-> [点击观看 Demo 视频](#) （待录制上传至 B站 / YouTube）
+[🎬 点击观看完整 Demo](https://github.com/donk569/ai-novel-to-script/blob/master/demo/ai%E5%B0%8F%E8%AF%B4%E8%BD%AC%E5%89%A7%E6%9C%AC.mp4)
 
 ---
 
