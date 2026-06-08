@@ -4,6 +4,10 @@
 
 ---
 
+## 🌐 在线体验
+
+👉 **[novel-to-script-pi.vercel.app](https://novel-to-script-pi.vercel.app)** — 一键打开即用
+
 ## 📺 Demo 视频
 
 [🎬 点击观看完整 Demo](https://github.com/donk569/ai-novel-to-script/blob/master/demo/ai%E5%B0%8F%E8%AF%B4%E8%BD%AC%E5%89%A7%E6%9C%AC.mp4)
