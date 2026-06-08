@@ -16,20 +16,9 @@
 
 ## 🚀 快速开始
 
-```bash
-# 1. 安装依赖
-npm install
+👉 **[https://novel-to-script-pi.vercel.app](https://novel-to-script-pi.vercel.app)** — 浏览器打开即用，无需安装
 
-# 2. 配置环境变量
-cp .env.example .env.local
-# 编辑 .env.local，填入你的 DeepSeek API Key
-
-# 3. 启动开发服务器
-npm run dev
-
-# 4. 打开浏览器访问
-# http://localhost:3000
-```
+> 如需本地运行：`npm install && npm run dev`（需配置 `DEEPSEEK_API_KEY`）
 
 ---
 
